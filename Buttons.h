@@ -15,15 +15,14 @@ class Buttons : public QWidget {
 public:
     Buttons(QWidget *parent = nullptr);
 private slots:
-    void OnQuit();
     void server_New_Connect();
     void socket_Read_Data();
     void socket_Disconnected();
     void open_host();
-
+    void send_to_client();
 private:
     QLabel *connection_data;
-    QLabel *lbl2;
+    QLabel *client_message;
     QTcpServer* server;
     QTcpSocket* socket{};
 };

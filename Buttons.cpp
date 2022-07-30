@@ -6,15 +6,17 @@
 Buttons::Buttons(QWidget *parent):QWidget(parent) {
     auto *quitBtn = new QPushButton("quit", this);
     auto *openBtn = new QPushButton("Open host", this);
+    auto* sendBtn = new QPushButton("Send hello message", this);
     connection_data = new QLabel("Push button to OPEN HOST", this);
-    lbl2 = new QLabel("", this);
+    client_message = new QLabel("", this);
 
     auto *grid = new QGridLayout(this);
     grid->addWidget(openBtn, 2, 1);
     grid->addWidget(quitBtn, 2, 0);
+    grid->addWidget(sendBtn, 2,2);
 
     grid->addWidget(connection_data, 3, 0);
-    grid->addWidget(lbl2, 4, 0);
+    grid->addWidget(client_message, 4, 0);
 
     setLayout(grid);
     server = new QTcpServer();
@@ -23,6 +25,7 @@ Buttons::Buttons(QWidget *parent):QWidget(parent) {
     connect(server,&QTcpServer::newConnection,this,&Buttons::server_New_Connect);
     connect(quitBtn, &QPushButton::clicked, this, QApplication::quit);
     connect(openBtn, &QPushButton::clicked, this, &Buttons::open_host);
+    connect(sendBtn, &QPushButton::clicked, this, &Buttons::send_to_client);
 }
 
 void Buttons::server_New_Connect() {
@@ -31,7 +34,6 @@ void Buttons::server_New_Connect() {
     //Connect the signal slot of the QTcpSocket to read the new data
     QObject::connect(socket, &QTcpSocket::readyRead, this, &Buttons::socket_Read_Data);
     QObject::connect(socket, &QTcpSocket::disconnected, this, &Buttons::socket_Disconnected);
-    //Send key enablement
 }
 
 void Buttons::socket_Read_Data() {
@@ -47,11 +49,14 @@ void Buttons::socket_Read_Data() {
 
 void Buttons::socket_Disconnected() {
     connection_data ->setText("Disconnected");
+    client_message->setText("");
 }
 
 void Buttons::open_host(){
     int port = 12345;
-    if(!server->listen(QHostAddress::Any, port))
+    connection_data ->setText("Host opened with port 12345 and ip address 127.0.0.1");
+
+    if(!server->listen(QHostAddress("127.0.0.1"), port))
     {
         //If an error occurs, the error message is output
         qDebug()<<server->errorString();
@@ -59,4 +64,9 @@ void Buttons::open_host(){
     }
 
     qDebug("Listen succeessfully!") ;
+}
+
+void Buttons::send_to_client() {
+    socket->write("Hello there!");
+    socket->flush();
 }
