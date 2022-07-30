@@ -19,9 +19,10 @@ private slots:
     void server_New_Connect();
     void socket_Read_Data();
     void socket_Disconnected();
+    void open_host();
 
 private:
-    QLabel *lbl;
+    QLabel *connection_data;
     QLabel *lbl2;
     QTcpServer* server;
     QTcpSocket* socket{};

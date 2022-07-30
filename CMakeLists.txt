@@ -14,7 +14,7 @@ find_package(Qt5 COMPONENTS
         Network
         REQUIRED)
 
-add_executable(RaspberryPi_project main.cpp Buttons.h Buttons.cpp Connection.h Connection.cpp app_v2/main.cpp)
+add_executable(RaspberryPi_project main.cpp Buttons.h Buttons.cpp)
 target_link_libraries(RaspberryPi_project
         Qt5::Core
         Qt5::Gui

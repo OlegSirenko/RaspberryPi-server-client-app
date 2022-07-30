@@ -73,22 +73,6 @@ build CMakeFiles/RaspberryPi_project.dir/Buttons.cpp.o: CXX_COMPILER__RaspberryP
   OBJECT_DIR = CMakeFiles/RaspberryPi_project.dir
   OBJECT_FILE_DIR = CMakeFiles/RaspberryPi_project.dir
 
-build CMakeFiles/RaspberryPi_project.dir/Connection.cpp.o: CXX_COMPILER__RaspberryPi_project_Debug /home/tehnokrat/CLionProjects/RaspberryPi_project/Connection.cpp || cmake_object_order_depends_target_RaspberryPi_project
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/RaspberryPi_project.dir/Connection.cpp.o.d
-  FLAGS = -g -fPIC
-  INCLUDES = -I/home/tehnokrat/CLionProjects/RaspberryPi_project/cmake-build-debug/RaspberryPi_project_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork
-  OBJECT_DIR = CMakeFiles/RaspberryPi_project.dir
-  OBJECT_FILE_DIR = CMakeFiles/RaspberryPi_project.dir
-
-build CMakeFiles/RaspberryPi_project.dir/app_v2/main.cpp.o: CXX_COMPILER__RaspberryPi_project_Debug /home/tehnokrat/CLionProjects/RaspberryPi_project/app_v2/main.cpp || cmake_object_order_depends_target_RaspberryPi_project
-  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/RaspberryPi_project.dir/app_v2/main.cpp.o.d
-  FLAGS = -g -fPIC
-  INCLUDES = -I/home/tehnokrat/CLionProjects/RaspberryPi_project/cmake-build-debug/RaspberryPi_project_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork
-  OBJECT_DIR = CMakeFiles/RaspberryPi_project.dir
-  OBJECT_FILE_DIR = CMakeFiles/RaspberryPi_project.dir/app_v2
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target RaspberryPi_project
@@ -97,7 +81,7 @@ build CMakeFiles/RaspberryPi_project.dir/app_v2/main.cpp.o: CXX_COMPILER__Raspbe
 #############################################
 # Link the executable RaspberryPi_project
 
-build RaspberryPi_project: CXX_EXECUTABLE_LINKER__RaspberryPi_project_Debug CMakeFiles/RaspberryPi_project.dir/RaspberryPi_project_autogen/mocs_compilation.cpp.o CMakeFiles/RaspberryPi_project.dir/main.cpp.o CMakeFiles/RaspberryPi_project.dir/Buttons.cpp.o CMakeFiles/RaspberryPi_project.dir/Connection.cpp.o CMakeFiles/RaspberryPi_project.dir/app_v2/main.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 || RaspberryPi_project_autogen
+build RaspberryPi_project: CXX_EXECUTABLE_LINKER__RaspberryPi_project_Debug CMakeFiles/RaspberryPi_project.dir/RaspberryPi_project_autogen/mocs_compilation.cpp.o CMakeFiles/RaspberryPi_project.dir/main.cpp.o CMakeFiles/RaspberryPi_project.dir/Buttons.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8 || RaspberryPi_project_autogen
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
   OBJECT_DIR = CMakeFiles/RaspberryPi_project.dir

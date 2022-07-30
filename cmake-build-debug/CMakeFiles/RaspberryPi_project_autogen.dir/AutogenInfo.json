@@ -88,12 +88,6 @@
 			"MU",
 			"EWIEGA46WW/moc_Buttons.cpp",
 			null
-		],
-		[
-			"/home/tehnokrat/CLionProjects/RaspberryPi_project/Connection.h",
-			"MU",
-			"EWIEGA46WW/moc_Connection.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -149,16 +143,6 @@
 	[
 		[
 			"/home/tehnokrat/CLionProjects/RaspberryPi_project/Buttons.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/tehnokrat/CLionProjects/RaspberryPi_project/Connection.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/tehnokrat/CLionProjects/RaspberryPi_project/app_v2/main.cpp",
 			"MU",
 			null
 		],
