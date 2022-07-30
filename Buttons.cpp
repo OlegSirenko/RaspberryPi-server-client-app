@@ -53,16 +53,17 @@ void Buttons::socket_Disconnected() {
 }
 
 void Buttons::open_host(){
+    QString address;
     int port = 12345;
-    connection_data ->setText("Host opened with port 12345 and ip address 127.0.0.1");
-
-    if(!server->listen(QHostAddress("127.0.0.1"), port))
-    {
+    address = "127.0.0.1";
+    if(!server->listen(QHostAddress(address), port)) {
         //If an error occurs, the error message is output
         qDebug()<<server->errorString();
         return;
     }
-
+    QString str;
+    str= "Host opened with port 12345 and ip address" + address;
+    connection_data ->setText(str);
     qDebug("Listen succeessfully!") ;
 }
 
