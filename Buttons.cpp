@@ -31,6 +31,7 @@ Buttons::Buttons(QWidget *parent):QWidget(parent) {
 void Buttons::server_New_Connect() {
     socket = server->nextPendingConnection();
     qDebug("Just connected");
+    connection_data ->setText("Someone just connected");
     //Connect the signal slot of the QTcpSocket to read the new data
     QObject::connect(socket, &QTcpSocket::readyRead, this, &Buttons::socket_Read_Data);
     QObject::connect(socket, &QTcpSocket::disconnected, this, &Buttons::socket_Disconnected);
@@ -42,7 +43,7 @@ void Buttons::socket_Read_Data() {
     buffer = socket->readAll();
     if(!buffer.isEmpty())
     {
-        connection_data -> setText(buffer);
+        client_message -> setText(buffer);
         qDebug()<<buffer;
     }
 }
@@ -55,14 +56,14 @@ void Buttons::socket_Disconnected() {
 void Buttons::open_host(){
     QString address;
     int port = 12345;
-    address = "127.0.0.1";
+    address = "192.168.110.213";
     if(!server->listen(QHostAddress(address), port)) {
         //If an error occurs, the error message is output
         qDebug()<<server->errorString();
         return;
     }
     QString str;
-    str= "Host opened with port 12345 and ip address" + address;
+    str= "Host opened with port 12345 and ip address " + address;
     connection_data ->setText(str);
     qDebug("Listen succeessfully!") ;
 }
