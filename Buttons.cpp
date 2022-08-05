@@ -3,7 +3,7 @@
 #include "Buttons.h"
 
 Buttons::Buttons(QWidget *parent):QWidget(parent) {
-    QWidget::setGeometry(200, 200, 300, 500);
+    QWidget::setGeometry(1380, 200, 100, 300);
     quitBtn = new QPushButton("quit", this);
     openBtn = new QPushButton("Open host", this);
     sendBtn = new QPushButton("Send hello message", this);
@@ -14,7 +14,7 @@ Buttons::Buttons(QWidget *parent):QWidget(parent) {
 
     address = new QLineEdit("127.0.0.1",this);
     port = new QLineEdit("5500", this);
-    messageToClient = new QLineEdit("Hello from computer", this);
+    messageToClient = new QLineEdit("Message to client", this);
     auto *grid = new QGridLayout(this);
 
     grid->addWidget(quitBtn, 0, 0);
@@ -85,7 +85,6 @@ void Buttons::open_host(){
         qDebug("Listen start");
     }
     else {
-        //socket->close();
         server->close();
         openBtn->setText("Open host");
         connection_data->setText("Host closed");
