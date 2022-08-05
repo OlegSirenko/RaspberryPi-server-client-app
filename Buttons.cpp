@@ -9,12 +9,17 @@ Buttons::Buttons(QWidget *parent):QWidget(parent) {
     auto* sendBtn = new QPushButton("Send hello message", this);
     connection_data = new QLabel("Push button to OPEN HOST", this);
     client_message = new QLabel("", this);
-    address = new QLineEdit(this);
+    address = new QLineEdit("127.0.0.1",this);
+    port = new QLineEdit("5500", this);
     auto *grid = new QGridLayout(this);
-    grid->addWidget(openBtn, 2, 1);
+
     grid->addWidget(quitBtn, 2, 0);
+    grid->addWidget(openBtn, 2, 1);
     grid->addWidget(sendBtn, 2,2);
-    grid->addWidget(address, 3, 1);
+
+    grid->addWidget(address, 4, 1);
+    grid->addWidget(port, 4, 2);
+
     grid->addWidget(connection_data, 3, 0);
     grid->addWidget(client_message, 4, 0);
 

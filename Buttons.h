@@ -25,6 +25,7 @@ private:
     QLabel *connection_data;
     QLabel *client_message;
     QLineEdit *address;
+    QLineEdit *port;
     QTcpServer* server;
     QTcpSocket* socket{};
 };
