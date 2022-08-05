@@ -1,0 +1,4 @@
+/home/tehnokrat/CLionProjects/RaspberryPi_project/cmake-build-release/CMakeFiles/RaspberryPi_project.dir
+/home/tehnokrat/CLionProjects/RaspberryPi_project/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/tehnokrat/CLionProjects/RaspberryPi_project/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/tehnokrat/CLionProjects/RaspberryPi_project/cmake-build-release/CMakeFiles/RaspberryPi_project_autogen.dir

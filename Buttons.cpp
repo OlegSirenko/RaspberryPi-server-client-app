@@ -9,12 +9,12 @@ Buttons::Buttons(QWidget *parent):QWidget(parent) {
     auto* sendBtn = new QPushButton("Send hello message", this);
     connection_data = new QLabel("Push button to OPEN HOST", this);
     client_message = new QLabel("", this);
-
+    address = new QLineEdit(this);
     auto *grid = new QGridLayout(this);
     grid->addWidget(openBtn, 2, 1);
     grid->addWidget(quitBtn, 2, 0);
     grid->addWidget(sendBtn, 2,2);
-
+    grid->addWidget(address, 3, 1);
     grid->addWidget(connection_data, 3, 0);
     grid->addWidget(client_message, 4, 0);
 
@@ -54,16 +54,19 @@ void Buttons::socket_Disconnected() {
 }
 
 void Buttons::open_host(){
-    QString address;
-    int port = 12345;
-    address = "192.168.110.213";
-    if(!server->listen(QHostAddress(address), port)) {
+    QString addr;
+
+    qDebug() << address->text();
+
+    addr = address->text();
+
+    if(!server->listen(QHostAddress(addr), 5500)) {
         //If an error occurs, the error message is output
         qDebug()<<server->errorString();
         return;
     }
     QString str;
-    str= "Host opened with port 12345 and ip address " + address;
+    str= "Host opened with port 5500 and ip address " + addr;
     connection_data ->setText(str);
     qDebug("Listen succeessfully!") ;
 }

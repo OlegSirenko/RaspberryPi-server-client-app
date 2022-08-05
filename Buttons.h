@@ -6,6 +6,7 @@
 #define RASPBERRYPI_PROJECT_BUTTONS_H
 #include "QWidget"
 #include <QLabel>
+#include <QLineEdit>
 #include <QGridLayout>
 #include <QTcpServer>
 #include <QTcpSocket>
@@ -23,6 +24,7 @@ private slots:
 private:
     QLabel *connection_data;
     QLabel *client_message;
+    QLineEdit *address;
     QTcpServer* server;
     QTcpSocket* socket{};
 };
