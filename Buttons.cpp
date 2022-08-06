@@ -6,7 +6,7 @@ Buttons::Buttons(QWidget *parent):QWidget(parent) {
     QWidget::setGeometry(1380, 200, 100, 300);
     quitBtn = new QPushButton("quit", this);
     openBtn = new QPushButton("Open host", this);
-    sendBtn = new QPushButton("Send hello message", this);
+    sendBtn = new QPushButton("Send message", this);
 
     connection_data = new QLabel("Push button to OPEN HOST", this);
     client_message = new QLabel("", this);
