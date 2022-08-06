@@ -88,6 +88,12 @@
 			"MU",
 			"EWIEGA46WW/moc_Buttons.cpp",
 			null
+		],
+		[
+			"/home/tehnokrat/CLionProjects/RaspberryPi_project/mainwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -148,6 +154,11 @@
 		],
 		[
 			"/home/tehnokrat/CLionProjects/RaspberryPi_project/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/tehnokrat/CLionProjects/RaspberryPi_project/mainwindow.cpp",
 			"MU",
 			null
 		]
